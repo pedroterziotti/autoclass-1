@@ -1,0 +1,16 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+
+
+<div class="card text-white bg-secondary mb-3" style="max-width: 25rem; margin: auto;margin-top:100px; padding:10px;">
+<div class="card-header" style="text-align: center;"> Adicionar uma aula nova</div>  
+
+  <form method="post" action="{% url 'crud:adcionar' %}">
+    {% csrf_token %}
+        <div style="font-color: #4e5d6c"> {{form.as_p}} <div>
+        <input type="submit" value="Adicionar" class="btn btn-success">
+        <input type="submit" value="Sair" class="btn btn-danger" onclick="closeForm()" style="float: right!important;">
+    </form>
+</div>
+

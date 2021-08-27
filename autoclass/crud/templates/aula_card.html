@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css'%}">
+
+<div class="grid-container">
+    <div class="grid-item" >
+        <div class="card text-white bg-secondary mb-3" style="width: 20rem;">
+            <div class="card-header">{{aula.dia_da_aula}} </div>
+            <div class="card-body">
+                <h4 class="card-title">{{ aula.nome}}</h4>
+                <p class="card-text">Plataforma: {{ aula.plataforma }}</p>
+                <p class="card-text">Início: {{ aula.horario_de_inicio }}</p>
+                <p class="card-text">Duração: {{ aula.duracao_da_aula_minutos }}m</p>
+            
+            <div style="display: grid; grid-template-columns: auto auto;">
+                <form action="{% url 'crud:DeleteAula' aula.pk%}" method="DELETE">
+                    <input type="submit" class="btn btn-danger" value="Excluir">
+                </form>
+                    <a class="btn btn-outline-info" style=" width: 100px;height:40px; margin-left:90px; float: right!important; " href={{aula.link}}> Abrir Aula </a>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</div>

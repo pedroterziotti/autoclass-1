@@ -1,0 +1,4 @@
+django
+win10toast
+selenium
+msedge.selenium_tools

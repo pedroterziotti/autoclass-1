@@ -1,0 +1,19 @@
+
+{% load static %}
+
+
+<div name="navbar">
+    {% include "navbar.html" %}
+</div>
+
+
+<div name="cards">
+    {% for aula in aulas  %}
+        {% include 'aula_card.html' %}
+    {% endfor %}
+
+</div>
+
+ <div id="myForm" class="modal">
+    {% include 'form.html' %}
+</div>
